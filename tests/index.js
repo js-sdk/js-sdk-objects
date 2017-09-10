@@ -8,4 +8,12 @@ describe("objects", () => {
       c: 1
     });
   });
+
+  it("updateWithKey(f, k, o)", () => {
+    const obj = { a: "b", c: 1 };
+    O.updateWithKey((k, v) => k + v, "a", obj).should.be.eql({
+      a: "ab",
+      c: 1
+    });
+  });
 });
