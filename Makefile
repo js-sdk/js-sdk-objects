@@ -15,10 +15,7 @@ dist/objects.min.js: src/index.js
 
 dist-all: pre-build dist/objects.js dist/objects.min.js
 
-examples/index.js: examples/src/index.js
-	$(BROWSERIFY) $< -d -t babelify --outfile $@
-
-all: test dist-all lib/objects.js examples/index.js
+all: test dist-all lib/objects.js
 
 test:
 	$(MOCHA) $(TEST_CFLAGS) tests/*.js
