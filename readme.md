@@ -5,12 +5,12 @@ Simple objects utilities.
 ## library
 
 ```ts
-update(f : Any -> Any, k : String, o : Object) -> Object
+$ update(f : Any -> Any, k : String, o : Object) -> Object
 
 // Update the value of key 'k' if present.
 
 
-updateWithKey(f : (String, Any) -> Any, k : String, o : Object) -> Object
+$ updateWithKey(f : (k : String, v : Any) -> Any, k : String, o : Object) -> Object
 
 // Update the value of key 'k' if present.
 // Function 'f' will receive the pair (k, v) and must return the new value of 'k'.
