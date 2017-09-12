@@ -16,4 +16,13 @@ describe("objects", () => {
       c: 1
     });
   });
+
+  it("merge(f, a, b)", () => {
+    const a = { a: 1, b: 2 };
+    const b = { a: 3, c: 4 };
+    const f = (k, a, b) => b /* always choose b */;
+    O.merge(f, a, b).should.be.eql({
+      a: 3, b: 2, c: 4
+    });
+  });
 });
